@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+{% block title%}
+This is contact title
+{% endblock title%}
+
+{% block body%}
+
+
+<font face="arial" size="5" color="blue">
+Please feel free to contact us, we are always here to help ypu.<br>
+For queries/ Booking/ Support/ Technical support call<br>
+9451576857, 9696873754, 9696862354<br>
+<font face="arial" size="5" color="yellow">
+hr@solutionpoint.com<br>
+    info@solutionpoint.com<br></font>
+<font face="arial" size="5" color="cyan">
+You can also send us your message below.<br></font>
+
+<form action="cont/" method="post">
+    {% csrf_token %}
+
+Name :<input type="text" name="name"><br><br>
+E-mail :<input type="text" name="email"><br><br>
+Phone : <input type="text" name="phone"><br><br>
+Details : <input type="text" name="Details"><br><br>
+
+<a href="{% url 'user_logout' %}">Logout  </a>
+<input type="submit" name="submit"><br>
+
+Location Map......
+
+Address:
+</form>
+{% endblock body%}
+<div class="container" >
+    <img src="/static/2.jfif" widthh="300" height="200">
+</div>

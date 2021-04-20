@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{% block title%}
+This is contact title
+{% endblock title%}
+
+{% block body%}
+
+<form action="logout/" method="post">
+    {% csrf_token %}
+ Email:    <input type="text" name="username"><br>
+ Password: <input type="password" name="password"><br>
+    <input type="submit" value="submit"><br>
+
+</form>
+{% endblock body %}
+</html>

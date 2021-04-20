@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%block title%}
+This is Profile title
+{% endblock title%}
+{% block body%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+
+
+ <style>
+       .success{
+          size=10;
+          color:red;
+          }
+    </style>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+
+
+<h1>Profile Page</h1>
+<h2>Welcome....</h2>{{name}}<br>
+{% if messages %}
+    {% for message in messages %}
+       <small {{ message.tags }} class="{{ message.tags }} " >
+          {{ message }}</small>
+    {% endfor %}
+    {% endif %}
+
+
+<a href="{% url 'user_logout' %}">Logout  </a>
+{% endblock body%}
+
+</form>
+</body>

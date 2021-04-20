@@ -1,0 +1,76 @@
+{%extends 'base.html'%}
+{% block title%}
+This is contact title
+{% endblock title%}
+
+{% block body%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+          crossorigin="anonymous">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossorigin="anonymous"/>
+    <!--custom css-->
+
+    <style>
+        .custom-margin{
+              margin-top:20vh;
+        }
+        body{
+             background-image:url('/static/w4.jpeg');
+             background-repeat:no-repeat;
+             width: 100%;
+             height:100%;
+        }
+    </style>
+    <title>Login Form</title>
+</head>
+<body>
+
+<div class=container-fluid">
+    <div class="row justify-content-center custom-margin">
+        <div class="col-md-4 col-sm-6">
+            <form action=" " class="shadow-lg p-4 bg-danger text-black">
+                <div class="form-group">
+                    <i class="fas fa-user"></i><label for="email" class="font-weight-bold pl-2">Email</label><input type="email" class="form-control" aria-placeholder="email"
+                     id="email">
+                    <small class="form-text">We will never share your email with anyone else</small>
+                </div>
+                 <div class="form-group">
+                    <i class="fas fa-unlock-alt"></i><label for="pass" class="font-weight-bold pl-2">Password</label><input type="password" class="form-control" aria-placeholder="password"
+                     id="pass">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-ckeck-input"
+                    id="checkboxselect">
+                    <label for="checkboxselect" class="form-check-label">Remember me?</label>
+                </div>
+                <button type="submit" class="btn
+                btn-outline-success
+                btn-block mt-3
+                font-weight-bold shadow-sm">Login</button>
+
+            </form>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!--jQuery popper Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock body%}

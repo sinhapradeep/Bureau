@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+{%block title%}
+This is cbse title
+{% endblock title%}
+{% block body%}
+<div class="container" >
+    <img src="/static/cbse-logo.jpg"  width="100" height="50" align="left">
+</div>
+<form action = 'coach/' method = 'POST' >
+    {% csrf_token %}
+
+    <h1><u>Central Board of Secondary Education</u></h1><br>
+
+    Select Your Class :
+<select name="stand">
+    <option value= >Select..</option>
+    <option value=6>6</option>
+    <option value=7>7</option>
+    <option value=8>8</option>
+    <option value=9>9</option>
+    <option value=10>10</option>
+    <option value=11>11</option>
+    <option value=12>12</option>
+</select>
+   Select Your Subject :
+<select name="subject">
+    <option value="  ">Select..</option>
+    <option value="Maths">Maths</option>
+    <option value="Science-Physics">Science-Physics</option>
+    <option value="Science-Chemistry">Science-Chemistry</option>
+    <option value="Science-Biology">Science-Biology</option>
+    <option value="Physics">Physics</option>
+    <option value="Chemistry">Chemistry</option>
+    <option value="Biology">Biology</option>
+    <option value="Computer Sc.">Computer Sc.</option>
+    <option value="Business Studies">Business Studies</option>
+    <option value="Accountancy">Accountancy</option>
+</select>
+
+Select Your Course Type :
+<select name="course">
+    <option value=" ">Select..</option>
+    <option value="Yearly">Yearly</option>
+    <option value="Term">Term</option>
+    <option value="Monthly">Monthly</option>
+ </select> <br><br>
+
+
+     <input type="submit" value="submit"/><h2>You Pay Rs.{{Pay}}</h2>
+    <a href="{% url 'ul' %}"><h3>Login to Pay</h3>  </a>
+
+</form>
+
+<!--$('#amount').val($('#totalPrice').html())-->
+
+{% endblock body%}

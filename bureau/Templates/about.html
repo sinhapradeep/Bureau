@@ -1,0 +1,71 @@
+{%extends 'base.html'%}
+{% block title %}
+This is about title
+{% endblock title %}
+{% block body%}
+
+ <style>
+        .custom-margin{
+              margin-top:20vh;
+        }
+        body{
+             background-image:url('/static/b2.jpeg');
+             background-repeat:no-repeat;
+             width: 100%;
+             height:100%;
+        }
+
+video
+{
+    position:bottom;
+    top:0 ;
+    left: 0;
+    width:30%;
+    height:30%;
+    object-fit: cover;
+    z-index:2;
+    pointer-events:none;
+    mix-blend-mode:screen;
+
+}
+    </style>
+
+<body>
+
+<div class="container-fluid my-4 px-0">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <center><img src="/static/manas.jpeg"  width=200 height=200 class="d-block w-5"  alt="..."><br>
+          Founder Director</center>
+      </div>
+    <div class="carousel-item">
+      <center><img src="/static/ps2.jpeg" width=200 height=200 class="d-block w-5" alt="..."><br>
+      Manager<br><div class="carousel-caption d-none d-md-block">
+      </div></center>
+    </div>
+      <h5>Welcome to the World of Learning...</h5>
+    <div class="carousel-item">
+      <center><img src="/static/rashmi.jpeg" width=200 height=200 class="d-block w-5" alt="..."><br>
+      Coordinator</center>
+
+    </div>
+  </div>
+</div>
+</div>
+<center><h3>This Institution was initiated with the inspiration instilled <br><br>by some of our loving students to make the
+learning<br><br> process more enthusiastic and simple.
+    Here student gets <br><br> actual support and motivation to understand the concepts of complex topic <br><br>
+    under one roof.
+</center>
+
+
+<div class="container" >
+
+</div>
+
+<!-- Form Bootstrap CSS -->
+
+{% endblock body %}
+

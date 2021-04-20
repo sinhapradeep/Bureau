@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{% block title %}
+This is about title
+{% endblock title %}
+{% block body%}
+<div class="container" >
+    <img src="/static/l3.jpeg"  width="100" height="50" align="left">
+</div>
+<form action = 'computer/' method = 'POST' >
+    {% csrf_token %}
+
+    <h1><u>Computer Courses: C++ / JAVA / PYTHON </u></h1><br>
+    Select Your Course :
+<select name="coursec">
+    <option value= >Select..</option>
+    <option value="C++">C++</option>
+    <option value="Java">JAVA</option>
+    <option value="Python">PYTHON</option>
+
+</select>
+
+    <input type="hidden" name="amount" id="amount">
+     <input type="submit" value="submit"/><h2>You Pay Rs.{{Pay}}</h2>
+    <a href="{% url 'ul' %}"><h3>Login to Pay</h3>  </a>
+
+</form>
+
+{% endblock body %}

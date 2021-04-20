@@ -1,0 +1,88 @@
+{%extends 'base.html'%}
+{%block title%}
+This is cbse title
+{% endblock title%}
+{% block body%}
+<div class="container-fluid my-4 px-0">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <center><img src="/static/manas.jpeg" width=200 height=200 class="d-block w-20" alt="..."><br>
+          Mr. Manas Sinha, M.Tech</center>
+      </div>
+    <div class="carousel-item">
+      <center><img src="/static/b2.jpeg" width=200 height=200 class="d-block w-20" alt="..."><br>
+      Mrs...., M.Sc.<br>
+      </div></center>
+    </div>
+    <div class="carousel-item">
+      <center><img src="/static/b1.jpeg" width=300 height=200 class="d-block w-20" alt="..."><br>
+      Mr.    , M.Sc.</center>
+    </div>
+      <div class="carousel-item">
+      <center><img src="/static/b2.jpeg" width=300 height=200 class="d-block w-20" alt="..."><br>
+      Mr.    , M.Sc.</center>
+    </div>
+      <div class="carousel-item">
+      <center><img src="/static/b1.jpeg" width=300 height=200 class="d-block w-20" alt="..."><br>
+      Mr.    , M.Sc.</center>
+    </div>
+      <div class="carousel-item">
+      <center><img src="/static/b2.jpeg" width=300 height=200 class="d-block w-20" alt="..."><br>
+      Mr.    , M.Sc.</center>
+    </div>
+  </div>
+</div>
+</div>
+<form action = 'teach/' method = 'POST' >
+    {% csrf_token %}
+
+    <h1><u>Teacher's Dashboard</u></h1><br><br><br>
+    Name          :  <input type="text" name="name">
+    Qualification :  <input type="text" name="qual">
+    Experience    :  <input type="text" name="exp"><br><br>
+    Phone / Mob.  :  <input type="text" name="mob">
+    Email         :  <input type="text" name="email"><br><br>
+
+    Select Your Class      :
+<select name="stand">
+    <option value= >Select..</option>
+    <option value=6>6</option>
+    <option value=7>7</option>
+    <option value=8>8</option>
+    <option value=9>9</option>
+    <option value=10>10</option>
+    <option value=11>11</option>
+    <option value=12>12</option>
+</select>
+   Select Your Subject     :
+<select name="subject">
+     <option value="  ">Select..</option>
+    <option value="Maths">Maths</option>
+    <option value="Science-Physics">Science-Physics</option>
+    <option value="Science-Chemistry">Science-Chemistry</option>
+    <option value="Science-Biology">Science-Biology</option>
+    <option value="Physics">Physics</option>
+    <option value="Chemistry">Chemistry</option>
+    <option value="Biology">Biology</option>
+    <option value="Computer Sc.">Computer Sc.</option>
+    <option value="Business Studies">Business Studies</option>
+    <option value="Accountancy">Accountancy</option>
+</select>
+
+Select Your Course Type     :
+<select name="board">
+     <option value=" ">Select..</option>
+    <option value="cbse">CBSE</option>
+    <option value="icse">ICSE</option>
+    <option value="State Board">state Board</option>
+ </select> <br><br>
+    Location   :  <input type="text" name="locat"><br>
+
+
+
+<input type="submit" value="submit"/>
+
+</form>
+
+{% endblock body%}

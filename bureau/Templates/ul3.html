@@ -1,0 +1,47 @@
+{%extends 'base.html'%}
+{%block title%}
+This is first title
+{% endblock title%}
+{% block body%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+
+<center>
+ <style>
+       .error{
+           color:red;
+          }
+    </style>
+
+<form action="" method="post" novalidate>
+ {% csrf_token %}
+
+    {% if form.non_field_errors %}
+          {% for error in form.non_field_errors %}
+                   <p class="error"> {{error}} </p>
+          {% endfor %}
+    {% endif %}
+
+    {% for fm in form %}
+           {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+    {% endfor %}
+
+
+
+
+ <input type="submit" value="Login">
+
+    <a href="{% url 'sign_up' %}">Sign Up </a>
+</form>
+</center>
+
+{% endblock body %}
+
+
+
+
+
