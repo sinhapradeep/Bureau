@@ -11,5 +11,5 @@ pytz==2020.4
 requests==2.25.1
 sqlparse==0.4.1
 urllib3==1.26.4
-waitress==2.0.0
+waitress==1.4.4
 whitenoise==5.2.0
